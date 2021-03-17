@@ -29,7 +29,6 @@ public static void register() {
         Registry.register(Registry.BLOCK, new Identifier("aot", "bloodless"), BLOODLESS);
         Registry.register(Registry.ITEM, new Identifier("aot", "bloodless"), new BloodlessItem(BLOODLESS, new FabricItemSettings().group(ItemGroup.COMBAT)));
 		BLOODLESS_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, "aot:bloodless", BlockEntityType.Builder.create(BloodlessEntity::new, BLOODLESS).build(null));
-
 }
 	public static final Item TALENT = new Item(new FabricItemSettings().group(ItemGroup.MISC));
 	@Override

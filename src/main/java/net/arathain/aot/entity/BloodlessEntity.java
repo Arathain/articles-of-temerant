@@ -3,13 +3,14 @@ package net.arathain.aot.entity;
 import net.arathain.aot.ArticlesOfTemerant;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.projectile.ArrowEntity;
+import net.minecraft.util.Tickable;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 
 
 import java.util.List;
 
-public class BloodlessEntity extends BlockEntity {
+public class BloodlessEntity extends BlockEntity implements Tickable {
 
     public BloodlessEntity() {
         super(ArticlesOfTemerant.BLOODLESS_ENTITY);
