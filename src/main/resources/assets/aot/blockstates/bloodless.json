@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "aot:block/bloodless"
+    },
+    "hanging=true": {
+      "model": "aot:block/bloodless_hanging"
+    }
+  }
+}
