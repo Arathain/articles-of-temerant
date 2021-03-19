@@ -4,6 +4,8 @@
   "package": "net.arathain.aot.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "DamageSourceAccessor",
+    "DamageSourceMixin"
   ],
   "client": [
   ],

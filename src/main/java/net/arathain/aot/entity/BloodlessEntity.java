@@ -2,6 +2,7 @@ package net.arathain.aot.entity;
 
 import net.arathain.aot.ArticlesOfTemerant;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.player.HungerManager;
 import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.util.Tickable;
 import net.minecraft.util.math.Box;
