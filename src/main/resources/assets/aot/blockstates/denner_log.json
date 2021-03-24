@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "aot:block/denner_log"
+    },
+    "axis=z": {
+      "model": "aot:block/denner_log",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "aot:block/denner_log",
+      "x": 90,
+      "y": 90
+    }
+  }
+}
