@@ -14,12 +14,15 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/aot/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
       "net.arathain.aot.ArticlesOfTemerant"
+    ],
+    "client": [
+      "net.arathain.aot.client.TemerantClient"
     ]
   },
   "mixins": [
