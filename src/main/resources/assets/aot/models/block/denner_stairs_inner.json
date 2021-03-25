@@ -1,0 +1,9 @@
+
+{
+"parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "aot:block/denner_planks",
+    "top": "aot:block/denner_planks",
+    "side": "aot:block/denner_planks"
+}
+}

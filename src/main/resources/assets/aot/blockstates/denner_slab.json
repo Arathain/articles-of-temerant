@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "aot:block/denner_slab" },
+    "type=top": { "model": "aot:block/denner_slab_top" },
+    "type=double": { "model": "aot:block/denner_planks" }
+  }
+}

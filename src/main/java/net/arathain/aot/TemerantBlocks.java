@@ -2,9 +2,8 @@ package net.arathain.aot;
 
 
 import com.terraformersmc.terraform.tree.block.TerraformSaplingBlock;
-import com.terraformersmc.terraform.wood.block.StrippableLogBlock;
+import com.terraformersmc.terraform.wood.block.*;
 
-import com.terraformersmc.terraform.wood.block.TerraformTrapdoorBlock;
 import net.arathain.aot.block.DennerSaplingGenerator;
 import net.arathain.aot.world.TemerantFeatures;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -36,6 +35,13 @@ public class TemerantBlocks {
     public static final Block DENNER_LEAVES = add("denner_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).breakByTool(FabricToolTags.HOES).allowsSpawning(TemerantBlocks::canSpawnOnLeaves).suffocates(TemerantBlocks::never).blockVision(TemerantBlocks::never)), ItemGroup.BUILDING_BLOCKS);
     public static final Block DENNER_SAPLING = add("denner_sapling", new TerraformSaplingBlock(new DennerSaplingGenerator(() -> TemerantFeatures.DENNER_TREE)), ItemGroup.DECORATIONS);
     public static final Block DENNER_TRAPDOOR = add("denner_trapdoor", new TerraformTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR).breakByTool(FabricToolTags.AXES)), ItemGroup.REDSTONE);
+    public static final Block DENNER_SLAB = add("denner_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).breakByTool(FabricToolTags.AXES)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block DENNER_PRESSURE_PLATE = add("denner_pressure_plate", new TerraformPressurePlateBlock(FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE).breakByTool(FabricToolTags.AXES)), ItemGroup.REDSTONE);
+    public static final Block DENNER_FENCE = add("denner_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE).breakByTool(FabricToolTags.AXES)), ItemGroup.DECORATIONS);
+    public static final Block DENNER_DOOR = add("denner_door", new TerraformDoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR).breakByTool(FabricToolTags.AXES)), ItemGroup.REDSTONE);
+    public static final Block DENNER_FENCE_GATE = add("denner_fence_gate", new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE).breakByTool(FabricToolTags.AXES)), ItemGroup.REDSTONE);
+    public static final Block DENNER_STAIRS = add("denner_stairs", new TerraformStairsBlock(DENNER_PLANKS, FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).breakByTool(FabricToolTags.AXES)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block DENNER_BUTTON = add("denner_button", new TerraformButtonBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON).breakByTool(FabricToolTags.AXES)), ItemGroup.REDSTONE);
 
 
     public static void register() {
@@ -72,11 +78,19 @@ public class TemerantBlocks {
 
     private static void addFlammables() {
         FlammableBlockRegistry flammableRegistry = FlammableBlockRegistry.getDefaultInstance();
-        flammableRegistry.add(DENNER_PLANKS, 3, 12);
-        flammableRegistry.add(DENNER_LOG, 3, 3);
-        flammableRegistry.add(DENNER_WOOD, 3, 3);
-        flammableRegistry.add(STRIPPED_DENNER_LOG, 3, 3);
-        flammableRegistry.add(STRIPPED_DENNER_WOOD, 3, 3);
+        flammableRegistry.add(DENNER_PLANKS, 3, 4);
+        flammableRegistry.add(DENNER_SLAB, 3, 4);
+        flammableRegistry.add(DENNER_STAIRS, 3, 4);
+        flammableRegistry.add(DENNER_BUTTON, 3, 4);
+        flammableRegistry.add(DENNER_FENCE, 3, 4);
+        flammableRegistry.add(DENNER_FENCE_GATE, 3, 4);
+        flammableRegistry.add(DENNER_LOG, 3, 4);
+        flammableRegistry.add(DENNER_TRAPDOOR, 3, 4);
+        flammableRegistry.add(DENNER_DOOR, 3, 4);
+        flammableRegistry.add(DENNER_PRESSURE_PLATE, 3, 4);
+        flammableRegistry.add(DENNER_WOOD, 3, 4);
+        flammableRegistry.add(STRIPPED_DENNER_LOG, 3, 4);
+        flammableRegistry.add(STRIPPED_DENNER_WOOD, 3, 4);
         flammableRegistry.add(DENNER_LEAVES, 18, 36);
     }
     public static boolean never(BlockState state, BlockView world, BlockPos pos) {

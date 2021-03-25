@@ -9,5 +9,12 @@
   "block.aot.denner_leaves": "Denner Leaves",
   "block.aot.denner_trapdoor": "Denner Trapdoor",
   "block.aot.stripped_denner_log": "Stripped Denner Log",
-  "block.aot.stripped_denner_wood": "Stripped Denner Wood"
+  "block.aot.stripped_denner_wood": "Stripped Denner Wood",
+  "block.aot.denner_pressure_plate": "Denner Pressure Plate",
+  "block.aot.denner_fence": "Denner Fence",
+  "block.aot.denner_fence_gate": "Denner Fence Gate",
+  "block.aot.denner_slab": "Denner Slab",
+  "block.aot.denner_stairs": "Denner Stairs",
+  "block.aot.denner_door": "Denner Door",
+  "block.aot.denner_button": "Denner Button"
 }

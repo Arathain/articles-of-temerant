@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "aot:block/denner_pressure_plate" },
+    "powered=true": { "model": "aot:block/denner_pressure_plate_down" }
+  }
+}
