@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "aot:block/stripped_denner_log",
+    "side": "aot:block/stripped_denner_log"
+  }
+}

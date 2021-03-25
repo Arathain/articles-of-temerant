@@ -2,5 +2,12 @@
   "item.aot.brigandine_chestplate": "Brigandine",
   "item.aot.brigandine_leggings": "Brigandine Leg Covers",
   "block.aot.bloodless": "Bloodless",
-  "block.aot.denner_planks": "Denner Planks"
+  "block.aot.denner_planks": "Denner Planks",
+  "block.aot.denner_sapling": "Denner Sapling",
+  "block.aot.denner_log": "Denner Log",
+  "block.aot.denner_wood": "Denner Wood",
+  "block.aot.denner_leaves": "Denner Leaves",
+  "block.aot.denner_trapdoor": "Denner Trapdoor",
+  "block.aot.stripped_denner_log": "Stripped Denner Log",
+  "block.aot.stripped_denner_wood": "Stripped Denner Wood"
 }

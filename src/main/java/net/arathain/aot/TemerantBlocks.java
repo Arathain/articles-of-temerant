@@ -1,8 +1,12 @@
 package net.arathain.aot;
 
-import com.terraformersmc.terraform.leaves.ComposterRecipes;
+
+import com.terraformersmc.terraform.tree.block.TerraformSaplingBlock;
 import com.terraformersmc.terraform.wood.block.StrippableLogBlock;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+
+import com.terraformersmc.terraform.wood.block.TerraformTrapdoorBlock;
+import net.arathain.aot.block.DennerSaplingGenerator;
+import net.arathain.aot.world.TemerantFeatures;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
@@ -26,8 +30,13 @@ public class TemerantBlocks {
 
     public static final Block DENNER_PLANKS = add("denner_planks", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).breakByTool(FabricToolTags.AXES)), ItemGroup.BUILDING_BLOCKS);
     public static final Block STRIPPED_DENNER_LOG = add("stripped_denner_log", createLog(MaterialColor.BROWN, MaterialColor.WOOD), ItemGroup.BUILDING_BLOCKS);
+    public static final Block STRIPPED_DENNER_WOOD = add("stripped_denner_wood", createLog(MaterialColor.WOOD, MaterialColor.WOOD), ItemGroup.BUILDING_BLOCKS);
     public static final Block DENNER_LOG = add("denner_log", new StrippableLogBlock(() -> STRIPPED_DENNER_LOG, MaterialColor.BROWN, FabricBlockSettings.copyOf(Blocks.DARK_OAK_LOG).breakByTool(FabricToolTags.AXES)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block DENNER_WOOD = add("denner_wood", new StrippableLogBlock(() -> STRIPPED_DENNER_WOOD, MaterialColor.BROWN, FabricBlockSettings.copyOf(Blocks.DARK_OAK_LOG).breakByTool(FabricToolTags.AXES)), ItemGroup.BUILDING_BLOCKS);
     public static final Block DENNER_LEAVES = add("denner_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).breakByTool(FabricToolTags.HOES).allowsSpawning(TemerantBlocks::canSpawnOnLeaves).suffocates(TemerantBlocks::never).blockVision(TemerantBlocks::never)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block DENNER_SAPLING = add("denner_sapling", new TerraformSaplingBlock(new DennerSaplingGenerator(() -> TemerantFeatures.DENNER_TREE)), ItemGroup.DECORATIONS);
+    public static final Block DENNER_TRAPDOOR = add("denner_trapdoor", new TerraformTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR).breakByTool(FabricToolTags.AXES)), ItemGroup.REDSTONE);
+
 
     public static void register() {
         for (Identifier id : ITEMS.keySet()) {
@@ -65,7 +74,9 @@ public class TemerantBlocks {
         FlammableBlockRegistry flammableRegistry = FlammableBlockRegistry.getDefaultInstance();
         flammableRegistry.add(DENNER_PLANKS, 3, 12);
         flammableRegistry.add(DENNER_LOG, 3, 3);
+        flammableRegistry.add(DENNER_WOOD, 3, 3);
         flammableRegistry.add(STRIPPED_DENNER_LOG, 3, 3);
+        flammableRegistry.add(STRIPPED_DENNER_WOOD, 3, 3);
         flammableRegistry.add(DENNER_LEAVES, 18, 36);
     }
     public static boolean never(BlockState state, BlockView world, BlockPos pos) {
