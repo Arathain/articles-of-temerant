@@ -13,8 +13,8 @@ public class TemerantFeatureConfigs {
     public static final TreeFeatureConfig DENNER_TREE_CONFIG = new TreeFeatureConfig.Builder(
             new SimpleBlockStateProvider(TemerantBlocks.DENNER_LOG.getDefaultState()),
             new SimpleBlockStateProvider(TemerantBlocks.DENNER_LEAVES.getDefaultState()),
-            new BlobFoliagePlacer(UniformIntDistribution.of(2, 1), UniformIntDistribution.of(2, 0), 2),
-            new StraightTrunkPlacer(6, 2, 0),
+            new BlobFoliagePlacer(UniformIntDistribution.of(3, 1), UniformIntDistribution.of(2, 0), 2),
+            new StraightTrunkPlacer(4, 2, 0),
 				new TwoLayersFeatureSize(1, 0, 1)
 		).ignoreVines().build();
 }

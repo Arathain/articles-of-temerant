@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "aot:denner_planks"
+    }
+  },
+  "result": {
+    "item": "aot:denner_slab",
+    "count": 6
+  }
+}

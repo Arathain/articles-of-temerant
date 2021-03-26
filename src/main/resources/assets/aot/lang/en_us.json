@@ -16,5 +16,10 @@
   "block.aot.denner_slab": "Denner Slab",
   "block.aot.denner_stairs": "Denner Stairs",
   "block.aot.denner_door": "Denner Door",
-  "block.aot.denner_button": "Denner Button"
+  "block.aot.denner_button": "Denner Button",
+  "entity.aot.denner_boat": "Denner Boat",
+  "item.aot.denner_boat": "Denner Boat",
+  "effect.aot.sweeteater": "Sweeteater",
+  "effect.aot.bliss": "Bliss",
+  "item.aot.denner_resin": "Denner Resin"
 }

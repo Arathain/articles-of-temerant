@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "aot:denner_planks"
+    }
+  ],
+  "result": {
+    "item": "aot:denner_button",
+    "count": 1
+  }
+}
