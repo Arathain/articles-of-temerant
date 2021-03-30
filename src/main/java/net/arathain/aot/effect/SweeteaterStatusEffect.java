@@ -1,6 +1,7 @@
 package net.arathain.aot.effect;
 
 import net.arathain.aot.ArticlesOfTemerant;
+import net.minecraft.block.AbstractRedstoneGateBlock;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.AttributeContainer;
 import net.minecraft.entity.damage.DamageSource;
@@ -8,6 +9,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffectType;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.MilkBucketItem;
 
 public class SweeteaterStatusEffect extends StatusEffect {
 
@@ -39,7 +41,7 @@ public class SweeteaterStatusEffect extends StatusEffect {
     public void onApplied(LivingEntity entity, AttributeContainer attributes, int amplifier) {
         if (this == ArticlesOfTemerant.SWEETEATER) {
             ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance (ArticlesOfTemerant.SWEETEATER, 12000000, 1));
-        };
+        }
     }
 
 }

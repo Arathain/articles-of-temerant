@@ -1,14 +1,26 @@
 {
   "variants": {
-    "axis=y": {
+    "axis=y,weeping=false": {
       "model": "aot:block/denner_log"
     },
-    "axis=z": {
+    "axis=z,weeping=false": {
       "model": "aot:block/denner_log",
       "x": 90
     },
-    "axis=x": {
+    "axis=x,weeping=false": {
       "model": "aot:block/denner_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,weeping=true": {
+      "model": "aot:block/denner_log_weeping"
+    },
+    "axis=z,weeping=true": {
+      "model": "aot:block/denner_log_weeping",
+      "x": 90
+    },
+    "axis=x,weeping=true": {
+      "model": "aot:block/denner_log_weeping",
       "x": 90,
       "y": 90
     }

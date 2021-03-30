@@ -3,7 +3,7 @@
   "group": "planks",
   "ingredients": [
     {
-      "tag": "aot:denner_planks"
+      "item": "aot:denner_planks"
     }
   ],
   "result": {

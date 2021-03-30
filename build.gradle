@@ -15,6 +15,8 @@ repositories {
 		name "wood api ig"
 		url "https://maven.terraformersmc.com/releases"
 	}
+	jcenter()
+
 }
 
 dependencies {
@@ -25,6 +27,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	include(modImplementation("com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_wood_api_version}"))
 	include(modImplementation("com.terraformersmc.terraform-api:terraform-tree-api-v1:${project.terraform_tree_api_version}"))
+	modImplementation "io.github.ladysnake:Satin:${satin_version}"
+	include "io.github.ladysnake:Satin:${satin_version}"
 
 }
 

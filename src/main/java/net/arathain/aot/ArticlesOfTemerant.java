@@ -24,6 +24,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.vehicle.BoatEntity;
 import net.minecraft.item.*;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -43,6 +44,7 @@ public class ArticlesOfTemerant implements ModInitializer {
 	public static final FoodComponent.Builder DENNER_RESIN_BUILDER = new FoodComponent.Builder().hunger(5).saturationModifier(0.2F).statusEffect(new StatusEffectInstance(ArticlesOfTemerant.BLISS, 1200), 100).statusEffect(new StatusEffectInstance(ArticlesOfTemerant.SWEETEATER, 12000000), 100);
 	public static final FoodComponent DENNER_RESIN_FOOD = DENNER_RESIN_BUILDER.build();
 	public static Item DENNER_RESIN = new Item( new Item.Settings().group(ItemGroup.FOOD).food(DENNER_RESIN_FOOD));
+	public static final BooleanProperty WEEPING = BooleanProperty.of("weeping");
 
 	public static void register() {
 		TemerantBlocks.register();
