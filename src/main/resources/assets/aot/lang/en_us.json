@@ -22,6 +22,10 @@
   "entity.aot.denner_boat": "Denner Boat",
   "item.aot.denner_boat": "Denner Boat",
   "effect.aot.sweeteater": "Sweeteater",
-  "effect.aot.bliss": "Bliss",
-  "item.aot.denner_resin": "Denner Resin"
+  "effect.aot.numbing": "Numbing",
+  "item.aot.denner_resin": "Denner Resin",
+  "item.minecraft.potion.effect.ophalum": "Ophalum",
+  "item.minecraft.splash_potion.effect.ophalum": "Splash Ophalum",
+  "item.minecraft.lingering_potion.effect.ophalum": "Lingering Ophalum",
+  "item.minecraft.tipped_arrow.effect.ophalum": "Arrow of Ophalum"
 }

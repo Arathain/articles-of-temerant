@@ -46,16 +46,17 @@ public class DennerLogBlock extends StrippableLogBlock {
         return super.onUse(state, world, blockpos, player, hand, hit);
     }
     @Override
-    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random chaos) {
+    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (state.get(ArticlesOfTemerant.WEEPING)) {
-            if (chaos.nextInt(10) == 0) {
+            if (random.nextInt(16) == 0) {
                 for (int i = 0; i < 8; i++) {
-                    BlockPos offset = pos.offset(Direction.Type.HORIZONTAL.random(chaos));
+                    BlockPos offset = pos.offset(Direction.Type.HORIZONTAL.random(random));
                     if (world.getBlockState(offset).isAir()) {
                         ItemScatterer.spawn(world, offset.getX() + 0.5, offset.getY() + 0.5, offset.getZ() + 0.5, new ItemStack(ArticlesOfTemerant.DENNER_RESIN));
                         world.playSound(null, pos, SoundEvents.ENTITY_ITEM_PICKUP, SoundCategory.BLOCKS, 1, 1);
                         break;
                     }
+
                 }
             }
         }

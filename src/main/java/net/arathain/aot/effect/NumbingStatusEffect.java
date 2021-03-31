@@ -5,9 +5,9 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectType;
 import net.minecraft.entity.player.PlayerEntity;
 
-public class BlissStatusEffect extends StatusEffect {
+public class NumbingStatusEffect extends StatusEffect {
 
-    public BlissStatusEffect() {
+    public NumbingStatusEffect() {
         super(
                 StatusEffectType.BENEFICIAL, // whether beneficial or harmful for entities
                 0xf5f5f5); // color in RGB
@@ -23,8 +23,6 @@ public class BlissStatusEffect extends StatusEffect {
     // This method is called when it applies the status effect. We implement custom functionality here.
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        if (entity instanceof PlayerEntity) {
-            ((PlayerEntity) entity).setAbsorptionAmount(40); // Higher amplifier gives you EXP faster
-        }
+
     }
 }

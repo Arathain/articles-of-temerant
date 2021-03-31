@@ -6,7 +6,9 @@
   "mixins": [
     "DamageSourceAccessor",
     "DamageSourceMixin",
-    "MilkBucketItemMixin"
+    "MilkBucketItemMixin",
+    "PlayerEntityMixin",
+    "BrewingRecipeAccessor"
   ],
   "client": [
   ],

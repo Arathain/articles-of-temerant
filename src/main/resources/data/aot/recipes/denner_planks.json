@@ -3,7 +3,7 @@
   "group": "planks",
   "ingredients": [
     {
-      "tag": "aot:blocks/denner_logs"
+      "tag": "aot:denner_logs"
     }
   ],
   "result": {

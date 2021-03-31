@@ -1,5 +1,7 @@
 package net.arathain.aot.effect;
 
+import ladysnake.satin.api.event.ShaderEffectRenderCallback;
+import ladysnake.satin.impl.ResettableManagedShaderEffect;
 import net.arathain.aot.ArticlesOfTemerant;
 import net.minecraft.block.AbstractRedstoneGateBlock;
 import net.minecraft.entity.LivingEntity;
@@ -9,7 +11,6 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffectType;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.MilkBucketItem;
 
 public class SweeteaterStatusEffect extends StatusEffect {
 
@@ -19,29 +20,32 @@ public class SweeteaterStatusEffect extends StatusEffect {
                 0xf5f5f5); // color in RGB
     }
 
-    // This method is called every tick to check weather it should apply the status effect or not
     @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
-
-        return true;
+        int k;
+        k = 50 >> amplifier;
+        if (k > 0) {
+            return duration % k == 0;
+        } else {
+            return true;
+        }
     }
 
     // This method is called when it applies the status effect. We implement custom functionality here.
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity) {
-            if (this != ArticlesOfTemerant.BLISS) {
 
+            if (!entity.hasStatusEffect(ArticlesOfTemerant.NUMBING)) {
                 ((PlayerEntity) entity).damage(DamageSource.STARVE, 5);
+
+
+
             }
         }
     }
 
-    @Override
-    public void onApplied(LivingEntity entity, AttributeContainer attributes, int amplifier) {
-        if (this == ArticlesOfTemerant.SWEETEATER) {
-            ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance (ArticlesOfTemerant.SWEETEATER, 12000000, 1));
-        }
-    }
+
+
 
 }

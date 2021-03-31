@@ -31,7 +31,7 @@ public class TemerantBlocks {
     public static final Block DENNER_PLANKS = add("denner_planks", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).breakByTool(FabricToolTags.AXES)), ItemGroup.BUILDING_BLOCKS);
     public static final Block STRIPPED_DENNER_LOG = add("stripped_denner_log", createLog(MaterialColor.BROWN, MaterialColor.WOOD), ItemGroup.BUILDING_BLOCKS);
     public static final Block STRIPPED_DENNER_WOOD = add("stripped_denner_wood", createLog(MaterialColor.BROWN, MaterialColor.WOOD), ItemGroup.BUILDING_BLOCKS);
-    public static final Block DENNER_LOG = add("denner_log", new DennerLogBlock(() -> STRIPPED_DENNER_LOG, MaterialColor.BROWN, FabricBlockSettings.copyOf(Blocks.DARK_OAK_LOG).breakByTool(FabricToolTags.AXES)), ItemGroup.BUILDING_BLOCKS);
+    public static final Block DENNER_LOG = add("denner_log", new DennerLogBlock(() -> STRIPPED_DENNER_LOG, MaterialColor.BROWN, FabricBlockSettings.copyOf(Blocks.DARK_OAK_LOG).breakByTool(FabricToolTags.AXES).ticksRandomly()), ItemGroup.BUILDING_BLOCKS);
     public static final Block DENNER_WOOD = add("denner_wood", new StrippableLogBlock(() -> STRIPPED_DENNER_WOOD, MaterialColor.BROWN, FabricBlockSettings.copyOf(Blocks.DARK_OAK_LOG).breakByTool(FabricToolTags.AXES)), ItemGroup.BUILDING_BLOCKS);
     public static final Block DENNER_LEAVES = add("denner_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).breakByTool(FabricToolTags.HOES).allowsSpawning(TemerantBlocks::canSpawnOnLeaves).suffocates(TemerantBlocks::never).blockVision(TemerantBlocks::never)), ItemGroup.BUILDING_BLOCKS);
     public static final Block DENNER_SAPLING = add("denner_sapling", new TerraformSaplingBlock(new DennerSaplingGenerator(() -> TemerantFeatures.DENNER_TREE)), ItemGroup.DECORATIONS);
